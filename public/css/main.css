@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  overflow: scroll;
+}
+
+html {
+  color: #CFE1FF;
+  font-size: 10px;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+body {
+  background: linear-gradient(to bottom right, #3A4E76, #4E6FB2) no-repeat;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/*弹窗动画*/
+.WinInitial  {
+	-webkit-animation: 0s WinInitial forwards;
+  animation: 0s WinInitial forwards;
+}
+@-webkit-keyframes WinInitial {
+	0% {opacity: 0;}
+	100% {opacity: 0;}
+}
+@keyframes WinInitial {
+  0% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+.ShowPopup {
+  -webkit-animation: 0.8s ShowPopup forwards;
+  animation: 0.8s ShowPopup forwards;
+}
+@-webkit-keyframes ShowPopup {
+	0% {background-color: rgba(0, 0, 0, 0);}
+	100% {background-color: rgba(0, 0, 0, 0.2);}
+}
+@keyframes ShowPopup {
+	0% {background-color: rgba(0, 0, 0, 0);}
+	100% {background-color: rgba(0, 0, 0, 0.2);}
+}
+
+.ShowWin  {
+	-webkit-animation: 0.8s ShowWin forwards;
+  animation: 0.8s ShowWin forwards;
+}
+@-webkit-keyframes ShowWin {
+	0% {opacity: 0; top: 200px;}
+	30% {opacity: 0; top: 200px;}
+	100% {opacity: 100%; top: 0;}
+}
+@keyframes ShowWin {
+	0% {opacity: 0; top: 200px;}
+	30% {opacity: 0; top: 200px;}
+	100% {opacity: 100%; top: 0;}
+}
+
+.HidePopup {
+  -webkit-animation: 0.8s HidePopup forwards;
+  animation: 0.8s HidePopup forwards;
+}
+@-webkit-keyframes HidePopup {
+	0% {background-color: rgba(0, 0, 0, 0.2);}
+	100% {background-color: rgba(0, 0, 0, 0);}
+}
+@keyframes HidePopup {
+	0% {background-color: rgba(0, 0, 0, 0.2);}
+	100% {background-color: rgba(0, 0, 0, 0);}
+}
+
+.HideWin  {
+	-webkit-animation: 0.7s HideWin forwards;
+  animation: 0.7s HideWin forwards;
+}
+@-webkit-keyframes HideWin {
+	0% {opacity: 100%; top: 0;}
+	100% {opacity: 0; top: 200px;}
+}
+@keyframes HideWin {
+	0% {opacity: 100%; top: 0;}
+	100% {opacity: 0; top: 200px;}
+}
+
+/*登陆注册弹窗*/
+.loginPop {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+.popup {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+.close{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.window {
+  z-index: 2;
+  width: 400px;
+  height: 280px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 50, 50, 0.1)
+}
+.window p{
+  font-weight: 400;
+  font-size: 18px;
+  position: absolute;
+  top: 22px;
+}
+.window #singnin{
+  color: #4E6FB1;
+  left: 84px;
+  cursor: pointer;
+}
+.window #singnup{
+  right: 84px;
+  cursor: pointer;
+}
+.window #separator{
+  width: 2px;
+  height: 8px;
+  background-color: #4E6FB1;
+  position: absolute;
+  top: 30px;
+  left: 200px;
+}
+.window form{
+  width: 260px;
+  margin: auto;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+}
+.window form input{
+  z-index: 10;
+  color: #4E6FB1;
+  font-weight: 200;
+  width: 260px;
+  height: 25px;
+  border: none;
+  border-bottom: 1.5px solid #A0A4AD;
+  outline-style: none;
+
+}
+.window form .line{
+  position: relative;
+  top: -2px;
+  width: 0px;
+  height: 1.5px;
+  background-color: #4E6FB1;
+}
+.window form .text{
+  font-weight: normal;
+  position: relative;
+  top: 22px;
+  z-index: 9;
+}
+.window form #password{
+
+  margin-top: 20px;
+}
+
+.window form button{
+  margin-top: 32px;
+  width: 260px;
+  height: 36px;
+  border-radius: 36px;
+  color: #CFE1FF;
+  font-size: 12px;
+  background-color: #4E6FB1;
+  border: none;
+}
+
+/*导航栏*/
+header {
+  background: linear-gradient(to bottom right, #3A4E76, #3F5785) no-repeat;
+  font-size: 1.4rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  height: 80px;
+  width: 100%;
+}
+
+header .logo {
+  margin-top: 32px;
+  margin-left: 5%;
+  float: left;
+  cursor: pointer;
+  height: 30px;
+}
+
+header ul {
+  float: right;
+  margin-right: 5%;
+  margin-top: 30px;
+}
+
+header ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+header ul .location {
+
+  float: left;
+  margin-right: 50px;
+}
+
+header ul .login, .loggedin {
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+.linear {
+  background: linear-gradient(to bottom right, #3A4E76, #4E6FB2);
+}
+
+#signoutBtn {
+  opacity: 0;
+  position: absolute;
+  right: 5%;
+  top: 60px;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #CFE1FF;
+  color: #3A4E76;
+  z-index: 11;
+  text-align: center;
+  line-height: 40px;
+}
+
+
+/*主体部分*/
+ main {
+   margin: 120px 5% 0 5%;
+ }
+
+article {
+  margin: auto;
+  width: 720px;
+  position: relative;
+  left: -10px;
+}
+
+.clear {
+  clear: both;
+}
+
+ .movie-card {
+   float: left;
+   width: 170px;
+   margin-left: 10px;
+   margin-top: 40px;
+   overflow: hidden;
+ }
+
+.pic {
+  width: 170px;
+  height: 225px;
+  overflow: hidden;
+}
+
+.pic a {
+  display: block;
+  width: 170px;
+  height: 225px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.pic img {
+  display: block;
+  box-shadow: 0px 2px 20px rgba(0, 10, 86, 70);
+  border-radius: 15px;
+  width: 140px;
+  height: 195px;
+  overflow: hidden;
+}
+.movie-card .text {
+  margin-left: 15px;
+}
+.name, .num {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.name {
+  margin-right: 10px;
+}
+.num {
+  color: #FFB400;
+  font-weight: 400;
+
+}
+.style {
+  margin-top: 8px;
+}
+.style img {
+  height: 14px;
+}
+
+/*页尾*/
+footer {
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 40px;
+  text-align: center;
+
+}
