@@ -22,7 +22,7 @@ $(document).ready(function() {
   html5 = '</p></div></div></div>',
   clear = '<div class="clear"><div>'
 
-  $.ajax('/getmovies', {
+  $.ajax('/getAllMovies', {
     dataType: 'json',
     success: function(data){
       nowplayingMovies(JSON.parse(data))

@@ -4,7 +4,7 @@
 // 引入模块
 var express = require('express')
 var app = express()
-var https = require('https')
+// var https = require('https')
 var fs = require('fs')
 var path = require('path')
 var cheerio = require('cheerio')
@@ -17,9 +17,10 @@ var opt = {
 }
 
 // exports.getMovies = getMovies
-module.exports = function getMovies() {
+module.exports = function getMovies(req, res) {
   // 创建 http get 请求
-  https.get(opt, function(res) {
+  app.get(opt, function(res) {
+    console.log('res', res);
       var html = ''; // 保存抓取到的 HTML 源码
       var movies = [];  // 保存解析 HTML 后的数据，即我们需要的电影信息
 
